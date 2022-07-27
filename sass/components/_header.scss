@@ -1,0 +1,46 @@
+.header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #ECECEC;
+    ;
+
+    & .container {
+            display: flex;
+            align-items: center;
+        }
+    
+    &__nav {
+            display: flex;
+            align-items: center;
+        }
+    
+    &__logo {
+            margin-left: auto;
+    
+            font-family: var(--text-font-2);
+            font-style: normal;
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 1.19;
+            letter-spacing: 0.03em;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 1);
+        }
+    
+    &__logo .header__span {
+            color: var(--text-color-3);
+        }
+    
+    &__menu {
+            margin-left: 93px;
+        }
+    
+    &__contacts {
+        margin-left: auto;
+    }
+}
+
+
+
+

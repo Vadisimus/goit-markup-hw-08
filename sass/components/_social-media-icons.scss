@@ -1,0 +1,42 @@
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+    margin-top: 16px;
+
+    &__item {
+        transition: background-color var(--animation);
+        border-radius: 50%;
+    }
+
+    &__item:hover,
+    &__item:focus {
+        background-color: var(--text-color-3);
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #AFB1B8;
+        width: 44px;
+        height: 44px;
+
+        transition: color var(--animation);
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: #fff;
+    }
+
+    &__icon {
+        fill: currentColor;
+        width: 20px;
+        height: 20px;
+    }
+}
+

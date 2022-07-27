@@ -1,0 +1,48 @@
+.clients {
+    &__title {
+        margin-bottom: 50px;
+
+        font-family: var(--text-font-1);
+        color: var(--text-color-2);
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #AFB1B8;
+        border: 1px solid #AFB1B8;
+        border-radius: 4px;
+
+        width: 170px;
+        height: 92px;
+
+        transition: color var(--animation), border var(--animation);
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: #2196F3;
+        border: 1px solid #2196F3;
+    }
+
+    &__icon {
+        fill: currentColor;
+        width: 106px;
+        height: 60px;
+    }
+}
+

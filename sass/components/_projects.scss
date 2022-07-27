@@ -1,0 +1,61 @@
+.projects {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__title {
+        display: none;
+    }
+
+    /*^ фильтр портфолио */
+
+    &__list {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item+.projects__item {
+        display: block;
+        margin-left: 8px;
+    }
+
+    &__btn {
+        border-radius: 4px;
+
+        padding-top: 6px;
+        padding-right: 22px;
+        padding-bottom: 6px;
+        padding-left: 22px;
+        border: transparent;
+
+        font-family: inherit;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.62;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--text-color-2);
+        background-color: rgba(245, 244, 250, 1);
+
+        transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
+    }
+
+    &__btn--active {
+        color: #fff;
+        background-color: rgba(33, 150, 243, 1);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    &__btn:hover,
+    &__btn:focus {
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(33, 150, 243, 1);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+
+

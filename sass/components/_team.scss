@@ -1,32 +1,67 @@
 .team {
     background-color: rgba(245, 244, 250, 1);
+    padding-top: 60px;
+
+    @include mq(desktop) {
+        padding-top: 94px;
+    }
+
 
     &__title {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
 
         font-style: normal;
         font-weight: 700;
-        font-size: 36px;
-        line-height: 1.16;
+        font-size: 28px;
+        line-height: 1.17;
         text-align: center;
         letter-spacing: 0.03em;
         color: var(--text-color-2);
+
+        @include mq(tablet) {
+            margin-bottom: 30px;
+        }
+
+        @include mq(desktop) {
+            margin-bottom: 50px;
+            font-size: 36px;
+            line-height: 1.16;
+
+        }
     }
 
     &__list {
         display: flex;
+        flex-direction: column;
+        width: 450px;
+        gap: 30px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq(tablet) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 738px;
+        }
+    
+        @include mq(desktop) {
+            width: 1170px;
+        }
     }
 
     &__item {
-        display: block;
-        margin-right: 30px;
+        width: 450px;
+        
+        @include mq(tablet) {
+            width: 354px;
+        }
+    
+        @include mq(desktop) {
+            width: 270px;
+        }
 
         background-color: rgba(255, 255, 255, 1);
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    }
-
-    &__item:last-child {
-        margin-right: 0;
     }
 
     &__img {

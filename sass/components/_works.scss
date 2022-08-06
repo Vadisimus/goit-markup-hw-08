@@ -3,6 +3,7 @@
 
     @include mq(desktop) {
         display: block;
+        padding-top: 47px;
         
         &__title {
             margin-bottom: 50px;

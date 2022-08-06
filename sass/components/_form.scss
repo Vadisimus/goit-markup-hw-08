@@ -44,12 +44,17 @@
     &__checkbox>label {
         display: inline-flex;
         align-items: center;
-        font-size: 14px;
-        line-height: 1.7;
+        font-size: 12px;
+        line-height: 1.16;
         letter-spacing: 0.03em;
 
         color: #757575;
-    }
+    
+        @include mq(desktop) {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+}
 
     &__policy-link {
         padding-left: 2px;

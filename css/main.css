@@ -50,14 +50,32 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 480px;
+  padding-left: 0;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .header {
@@ -196,7 +214,6 @@ body {
   margin: 0 auto;
   background-color: var(--bg-color-2);
   text-align: center;
-  padding-top: 200px;
   padding-bottom: 200px;
 }
 .hero__title {
@@ -235,26 +252,63 @@ body {
 }
 
 .features {
-  padding-bottom: 47px;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-bottom: 47px;
+  }
 }
 .features__title {
   display: none;
 }
 .features__list {
   display: flex;
+  flex-direction: column;
+  width: 450px;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .features__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 738px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__list {
+    width: 1170px;
+  }
 }
 .features__item {
-  margin-right: 30px;
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: 270px;
+  }
 }
 .features__item:last-child {
-  margin-right: 0;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .features__item:last-child {
+    margin-right: 0;
+  }
 }
 .features__icon-container {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background: #F5F4FA;
   border-radius: 4px;

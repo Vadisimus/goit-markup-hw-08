@@ -1,7 +1,10 @@
 .works {
-    padding-top: 47px;
+    display: none;
 
-    &__title {
+    @include mq(desktop) {
+        display: block;
+        
+        &__title {
             margin-bottom: 50px;
     
             font-style: normal;
@@ -13,23 +16,23 @@
             color: var(--text-color-2);
         }
     
-    &__list {
+        &__list {
             display: flex;
         }
     
-    &__item {
+        &__item {
             margin-right: 30px;
         }
     
-    &__item:last-child {
+        &__item:last-child {
             margin-right: 0;
         }
     
-    &-thumb {
+        &-thumb {
             position: relative;
         }
     
-    &-thumb__overlay {
+        &-thumb__overlay {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -42,7 +45,7 @@
             background: rgba(47, 48, 58, 0.8);
         }
     
-    &-thumb__label {
+        &-thumb__label {
             font-family: var(--text-font-1);
             font-weight: 700;
             font-size: 14px;
@@ -52,5 +55,7 @@
             text-transform: uppercase;
             color: #FFFFFF;
         }
+    }
+    
 }
 

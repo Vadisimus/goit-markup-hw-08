@@ -209,28 +209,53 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin: 0 auto;
+  padding: 118px 0;
   background-color: var(--bg-color-2);
   text-align: center;
   padding-bottom: 200px;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+  }
 }
 .hero__title {
   margin-bottom: 30px;
   font-style: normal;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.6;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 .hero__btn {
   display: inline-block;
   align-items: center;
   text-align: center;
-  padding: 10px 32px;
+  padding: 10px 24px;
   cursor: pointer;
   border: transparent;
   min-width: 200px;
@@ -246,6 +271,11 @@ body {
   background-color: rgb(33, 150, 243);
   transform: scale(100%);
   transition: transform var(--animation);
+}
+@media screen and (min-width: 1200px) {
+  .hero__btn {
+    padding: 10px 32px;
+  }
 }
 .hero__btn:hover, .hero__btn:focus {
   transform: scale(105%);

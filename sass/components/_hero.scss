@@ -6,24 +6,45 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 1600px;
-    height: 600px;
+    max-width: 480px;
+    height: 400px;
     margin: 0 auto;
+    padding: 118px 0;
 
     background-color: var(--bg-color-2);
     text-align: center;
     padding-bottom: 200px;
+
+    @include mq(tablet) {
+        max-width: 768px;
+    }
+
+    @include mq(desktop) {
+        max-width: 1600px;
+        height: 600px;
+        padding: 200px 0;
+    }
 
     &__title {
             margin-bottom: 30px;
     
             font-style: normal;
             font-weight: 900;
-            font-size: 44px;
-            line-height: 1.36;
+            font-size: 26px;
+            line-height: 1.6;
             letter-spacing: 0.06em;
             text-transform: uppercase;
             color: rgba(255, 255, 255, 1);
+
+            @include mq(tablet) {
+                font-size: 44px;
+                line-height: 1.36;
+            }
+        
+            @include mq(desktop) {
+                font-size: 44px;
+                line-height: 1.36;
+            }
         }
     
     &__btn {
@@ -31,7 +52,7 @@
             align-items: center;
             text-align: center;
     
-            padding: 10px 32px;
+            padding: 10px 24px;
             cursor: pointer;
     
             border: transparent;
@@ -52,6 +73,10 @@
     
             transform: scale(100%);
             transition: transform var(--animation);
+
+            @include mq(desktop) {
+                padding: 10px 32px;
+            }
         }
     
     &__btn:hover,

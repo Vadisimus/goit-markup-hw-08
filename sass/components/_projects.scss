@@ -1,6 +1,11 @@
 .projects {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mq(desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 
     &__title {
         display: none;
@@ -9,15 +14,34 @@
     /*^ фильтр портфолио */
 
     &__list {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+
+        @include mq(tablet) {
+            margin-bottom: 30px;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        @include mq(desktop) {
+            margin-bottom: 50px;
+        }
     }
 
-    &__item+.projects__item {
-        display: block;
-        margin-left: 8px;
+    &__list--mobile {
+        @include mq(mobileOnly) {
+            display: flex;
+            gap: 8px;
+        }
+
+        @include mq(tablet) {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+        }
+        
     }
 
     &__btn {

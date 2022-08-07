@@ -1,17 +1,23 @@
 .category {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+
+    @include mq(tablet) {
+        flex-direction: row;
+    }
 
     &__item {
-        margin-left: 30px;
-    }
+        width: 450px;
 
-    &__item:nth-child(3n + 1) {
-        margin-left: 0;
-    }
+        @include mq(tablet) {
+            width: 354px;
+        }
 
-    &__item:nth-child(n + 4) {
-        margin-top: 30px;
+        @include mq(desktop) {
+            width: 370px;
+        }
     }
 
     &__link {

@@ -604,15 +604,26 @@ body {
 .category {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .category {
+    flex-direction: row;
+  }
 }
 .category__item {
-  margin-left: 30px;
+  width: 450px;
 }
-.category__item:nth-child(3n+1) {
-  margin-left: 0;
+@media screen and (min-width: 768px) {
+  .category__item {
+    width: 354px;
+  }
 }
-.category__item:nth-child(n+4) {
-  margin-top: 30px;
+@media screen and (min-width: 1200px) {
+  .category__item {
+    width: 370px;
+  }
 }
 .category__link {
   display: block;

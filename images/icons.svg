@@ -82,5 +82,13 @@
     <symbol id="icon-check" viewBox="0 0 42 32">
       <path fill="#fff" style="fill:var(--color1, #fff);stroke:var(--color1, #fff)" stroke="#fff" stroke-width=".64" d="m6.263 15.205-.22-.21-3.307 3.132 11.651 11.114L38.864 5.89l-3.285-3.134-21.192 20.197-8.124-7.75z"/>
     </symbol>
+
+    <!-- хедер меню -->
+    <symbol id="icon-menu-close" viewBox="0 0 32 32">
+      <path d="M23.733 10.304 22.229 8.8l-5.963 5.963L10.303 8.8l-1.504 1.504 5.963 5.963-5.963 5.963 1.504 1.504 5.963-5.963 5.963 5.963 1.504-1.504-5.963-5.963 5.963-5.963z"/>
+    </symbol>
+    <symbol id="icon-menu-open" viewBox="0 0 32 32">
+      <path d="M6.4 11.733V9.6h19.2v2.133H6.4zm0 5.334h19.2v-2.133H6.4v2.133zm0 5.333h19.2v-2.133H6.4V22.4z"/>
+    </symbol>
   </defs>
 </svg>

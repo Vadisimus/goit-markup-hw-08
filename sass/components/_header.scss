@@ -100,8 +100,23 @@
             padding: 0;
             border: none;
             background-color: transparent;
+
+            fill: #000000;
+
+            transition: fill var(--animation);
         }
     }
+
+    &__btn:hover,
+    &__btn:focus {
+        fill: #2196F3;
+    }
+
+    
+        
+
+    
+    
 
     &__socials-list {
         display: flex;

@@ -196,7 +196,12 @@ body {
     padding: 0;
     border: none;
     background-color: transparent;
+    fill: #000000;
+    transition: fill var(--animation);
   }
+}
+.header__btn:hover, .header__btn:focus {
+  fill: #2196F3;
 }
 .header__socials-list {
   display: flex;
@@ -623,6 +628,17 @@ body {
 }
 .team__img {
   display: block;
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .team__img {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__img {
+    width: 270px;
+  }
 }
 .team__wrapper {
   padding: 30px 0;
@@ -784,6 +800,17 @@ body {
 }
 .category__img {
   display: block;
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .category__img {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .category__img {
+    width: 370px;
+  }
 }
 .category__thumb {
   position: relative;

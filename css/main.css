@@ -209,7 +209,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 480px;
+  max-width: 1600px;
   height: 400px;
   margin: 0 auto;
   padding: 118px 0;
@@ -217,14 +217,8 @@ body {
   text-align: center;
   padding-bottom: 200px;
 }
-@media screen and (min-width: 768px) {
-  .hero {
-    max-width: 768px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1600px;
     height: 600px;
     padding: 200px 0;
   }
@@ -704,25 +698,72 @@ body {
 }
 .footer__container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__tablet-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: baseline;
+    gap: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__tablet-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: baseline;
+    gap: 70px;
+  }
 }
 .footer__logo {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
   font-family: var(--text-font-2);
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    display: block;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
 .footer__logo--span {
   color: var(--text-color-3);
 }
+.footer__list {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__list {
+    margin-bottom: 0px;
+  }
+}
 .footer__item {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 9px;
   font-style: normal;
   font-weight: 400;
@@ -730,6 +771,11 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 1200px) {
+  .footer__item {
+    display: block;
+  }
 }
 .footer__item:last-child {
   margin-bottom: 0;
@@ -743,10 +789,19 @@ body {
   color: var(--text-color-3);
 }
 .footer__social {
-  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__social {
+    margin-left: auto;
+  }
 }
 .footer__media-title {
-  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
   font-family: var(--text-font-1);
   font-weight: 700;
   font-size: 14px;
@@ -755,11 +810,6 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
 }
-.footer__newsletter {
-  margin-top: 12px;
-  margin-left: 93px;
-}
-
 .social-media__link--footer-icon {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.1);
@@ -775,14 +825,29 @@ body {
 
 .subscribe {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 0;
+  }
 }
 .subscribe__form {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 .subscribe__label {
+  margin-top: 60px;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -792,18 +857,25 @@ body {
 }
 .subscribe__input {
   padding: 15px 16px;
-  width: 358px;
+  width: 450px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
   color: #fff;
 }
+@media screen and (min-width: 1200px) {
+  .subscribe__input {
+    width: 358px;
+  }
+}
 .subscribe__btn {
   display: flex;
   align-items: center;
   text-align: center;
-  margin-left: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
   padding: 10px 28px;
   cursor: pointer;
   height: 50px;
@@ -818,6 +890,11 @@ body {
   letter-spacing: 0.06em;
   color: #FFFFFF;
   transition: background-color var(--animation);
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__btn {
+    margin-left: 12px;
+  }
 }
 .subscribe__btn:hover, .subscribe__btn:focus {
   background-color: #188CE8;

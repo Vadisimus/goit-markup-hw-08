@@ -6,7 +6,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 480px;
+    max-width: 1600px;
     height: 400px;
     margin: 0 auto;
     padding: 118px 0;
@@ -15,12 +15,7 @@
     text-align: center;
     padding-bottom: 200px;
 
-    @include mq(tablet) {
-        max-width: 768px;
-    }
-
     @include mq(desktop) {
-        max-width: 1600px;
         height: 600px;
         padding: 200px 0;
     }

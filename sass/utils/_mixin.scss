@@ -21,7 +21,7 @@
         }
     }
 
-    @if $type ==tabletOnly {
+    @if $type == tabletOnly {
         @media screen and (min-width: $tab) and (max-width: ($desk - 0.02)) {
             @content;
         }

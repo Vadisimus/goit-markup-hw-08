@@ -6,23 +6,66 @@
 
     &__container {
         display: flex;
-        align-items: baseline;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq(tablet) {
+
+        }
+
+        @include mq(desktop) {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+    }
+
+    &__tablet-view {
+        @include mq(tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: baseline;
+            gap: 165px;
+        }
+
+            @include mq(desktop) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: baseline;
+            gap: 70px;
+        }
     }
 
     /*^ logo */
 
     &__logo {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 20px;
 
         font-family: var(--text-font-2);
         font-style: normal;
         font-weight: 700;
         font-size: 26px;
-        line-height: 1.19;
+        line-height: 1.16;
         letter-spacing: 0.03em;
         text-decoration: none;
         color: rgba(255, 255, 255, 1);
+
+        @include mq(tablet) {
+
+        }
+
+        @include mq(desktop) {
+            display: block;
+            font-size: 26px;
+            line-height: 1.19;
+        }
     }
 
     &__logo--span {
@@ -30,9 +73,18 @@
     }
 
     /*^ adress */
+    &__list {
+        margin-bottom: 60px;
+
+        @include mq(tablet) {
+            margin-bottom: 0px;
+        }
+    }
 
     &__item {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 9px;
 
         font-style: normal;
@@ -41,6 +93,10 @@
         line-height: 1.71;
         letter-spacing: 0.03em;
         color: rgba(255, 255, 255, 1);
+
+        @include mq(desktop) {
+            display: block;
+        }
     }
 
     &__item:last-child {
@@ -62,11 +118,19 @@
     /*^ social "присоединяйтесь" */
 
     &__social {
-        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include mq(desktop) {
+            margin-left: auto;
+        }
     }
 
     &__media-title {
-        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4px;
 
         font-family: var(--text-font-1);
         font-weight: 700;
@@ -78,7 +142,6 @@
     }
 
     &__newsletter {
-        margin-top: 12px;
-        margin-left: 93px;
+        
     }
 }

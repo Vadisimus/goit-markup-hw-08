@@ -43,6 +43,9 @@
         }
     
     &__btn {
+        @include mq(mobileOnly) {
+            display: none;
+        }
             display: inline-block;
             align-items: center;
             text-align: center;

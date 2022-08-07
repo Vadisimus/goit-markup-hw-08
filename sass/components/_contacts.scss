@@ -1,21 +1,26 @@
 .contacts {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
 
-    &__item+.contacts__item {
-        margin-left: 50px;
+    @include mq(desktop) {
+        flex-direction: row;
+        gap: 50px;
     }
-
-    &__item:last-child {
-        margin-right: 0;
-    }
+    
 
     &__icon-envelope {
-        margin-right: 10px;
-        fill: currentColor;
-        width: 16px;
-        height: 12px;
+        display: none;
 
-        transition: fill var(--animation);
+        @include mq(tablet) {
+            margin-right: 10px;
+            fill: currentColor;
+            width: 16px;
+            height: 12px;
+
+            transition: fill var(--animation);
+        }
+        
     }
 
     &__icon-envelope:hover,
@@ -24,12 +29,17 @@
     }
 
     &__icon-smartphone {
-        margin-right: 10px;
-        fill: currentColor;
-        width: 10px;
-        height: 16px;
+        display: none;
 
-        transition: fill var(--animation);
+        @include mq(tablet) {
+            margin-right: 10px;
+            fill: currentColor;
+            width: 10px;
+            height: 16px;
+        
+            transition: fill var(--animation);
+        }
+        
     }
 
     &__icon-smartphone:hover,
@@ -42,14 +52,27 @@
         align-items: center;
 
         font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
+        font-size: 24px;
+        line-height: 1.16;
         letter-spacing: 0.02em;
         text-decoration: none;
         color: var(--text-color-1);
 
         transition: color var(--animation);
+
+        @include mq(tablet) {
+            font-size: 14px;
+            line-height: 1.14;
+        }
     }
+
+   &__link--active {
+    @include mq(mobileOnly) {
+        font-size: 34px;
+        line-height: 1.17;
+        color: #2196F3;
+    }
+   }
 
     &__link:hover,
     &__link:focus {

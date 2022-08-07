@@ -36,13 +36,89 @@
     &__logo .header__span {
             color: var(--text-color-3);
         }
+
+    &__mobile-menu {
+        display: none;
+        
+        @include mq(mobileOnly) {
+            display: block;
+        }
+    }
     
     &__menu {
-            margin-left: 93px;
+        display: none;
+
+        @include mq(tablet) {
+            display: block;
+            margin-left: 87px;
         }
+
+        @include mq(tablet) {
+            display: block;
+            margin-left: 87px;
+        }
+    }
+
+    &__menu-list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 302px;
+    }
+
+    &__mobile-contacts {
+        display: none;
+
+        @include mq(mobileOnly) {
+            display: block;
+            margin-bottom: 64px;
+        }
+    }
     
     &__contacts {
-        margin-left: auto;
+        display: none;
+
+        @include mq(tablet) {
+            display: block;
+            margin-left: auto;
+        }
+    
+        @include mq(tablet) {
+            display: block;
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        @include mq(mobileOnly) {
+            display: inline-flex;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            margin: 0;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+        }
+    }
+
+    &__socials-list {
+        display: flex;
+    }
+
+    &__socials-link {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.2;
+    
+        letter-spacing: 0.02em;
+    
+        color: #2196F3;
+    }
+
+    &__social-link-line {
+        margin: 0 10px;
     }
 }
 

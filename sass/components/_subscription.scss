@@ -35,6 +35,9 @@
     }
 
     &__input {
+        @include mq(mobileOnly) {
+            display: none;
+        }
         padding: 15px 16px;
         width: 450px;
 

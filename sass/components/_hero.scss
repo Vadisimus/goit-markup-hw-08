@@ -2,7 +2,7 @@
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(../images/hero-img.jpg);
+        url(../images/hero-img@1x.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,6 +14,15 @@
     background-color: var(--bg-color-2);
     text-align: center;
     padding-bottom: 200px;
+
+    @media (min-device-pixel-ratio: 2), 
+    (min-resolution: 2dppx), 
+    (min-resolution: 192dpi) {
+            background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(../images/hero-img@2x.jpg);
+    }
 
     @include mq(desktop) {
         height: 600px;

@@ -16,7 +16,7 @@
     &__list {
         margin-bottom: 40px;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 8px;
 
         @include mq(tablet) {
@@ -28,20 +28,6 @@
         @include mq(desktop) {
             margin-bottom: 50px;
         }
-    }
-
-    &__list--mobile {
-        @include mq(mobileOnly) {
-            display: flex;
-            gap: 8px;
-        }
-
-        @include mq(tablet) {
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-        }
-        
     }
 
     &__btn {

@@ -8,18 +8,6 @@
         flex-direction: row;
     }
 
-    &__item {
-        // width: 450px;
-
-        // @include mq(tablet) {
-        //     width: 354px;
-        // }
-
-        // @include mq(desktop) {
-        //     width: 370px;
-        // }
-    }
-
     &__link {
         display: block;
         text-decoration: none;
@@ -35,14 +23,6 @@
         display: block;
         max-width: 100%;
         height: auto;
-
-        // @include mq(tablet) {
-        //     width: 354px;
-        // }
-
-        // @include mq(desktop) {
-        //     width: 370px;
-        // }
     }
 
     &__thumb {

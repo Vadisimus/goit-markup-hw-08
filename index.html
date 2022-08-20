@@ -221,14 +221,28 @@
           <ul class="works__list">
             <li class="works__item">
               <div class="works-thumb">
-                <img
+                <!-- <img
                   class="works-thumb__img"
                   srcset="./images/works-thumb-1@2x.jpg 2x"
                   src="./images/works-thumb-1@1x.jpg"
                   alt="человек пишущий код HTML на клавиатуре"
                   width="370"
                   height="295"
-                />
+                /> -->
+                <picture>
+                  <source
+                    srcset="
+                      ./images/works-thumb-1@1x-desktop.jpg 1x,
+                      ./images/works-thumb-1@2x-desktop.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="works-thumb__img"
+                    src="./images/works-thumb-1@1x-desktop.jpg"
+                    alt="человек пишущий код HTML на клавиатуре"
+                  />
+                </picture>
                 <div class="works-thumb__overlay">
                   <p class="works-thumb__label">десктопные приложения</p>
                 </div>
@@ -236,13 +250,20 @@
             </li>
             <li class="works__item">
               <div class="works-thumb">
-                <img
-                  class="works-thumb__img"
-                  srcset="./images/works-thumb-2@2x.jpg 2x"
-                  src="./images/works-thumb-2@1x.jpg"
-                  alt="человек работает над семантикой стриницы на мобильном устройстве"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/works-thumb-2@1x-desktop.jpg 1x,
+                      ./images/works-thumb-2@2x-desktop.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="works-thumb__img"
+                    src="./images/works-thumb-2@1x-desktop.jpg"
+                    alt="человек работает над семантикой стриницы на мобильном устройстве"
+                  />
+                </picture>
                 <div class="works-thumb__overlay">
                   <p class="works-thumb__label">мобильные приложения</p>
                 </div>
@@ -250,13 +271,21 @@
             </li>
             <li class="works__item">
               <div class="works-thumb">
-                <img
-                  class="works-thumb__img"
-                  srcset="./images/works-thumb-3@2x.jpg 2x"
-                  src="./images/works-thumb-3@1x.jpg"
-                  alt="человек подбирает цветовую диаграмму на планшете"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/works-thumb-3@1x-desktop.jpg 1x,
+                      ./images/works-thumb-3@2x-desktop.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="works-thumb__img"
+                    src="works-thumb-3@1x-desktop.jpg"
+                    alt="человек подбирает цветовую диаграмму на планшете"
+                  />
+                </picture>
+
                 <div class="works-thumb__overlay">
                   <p class="works-thumb__label">дизайнерские решения</p>
                 </div>
@@ -272,12 +301,27 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__img"
-                srcset="./images/team-1@2x.jpg 2x"
-                src="./images/team-1@1x.jpg"
-                alt="фото Игорь Демьяненко"
-              />
+              <picture>
+                <source
+                  srcset="./images/team-1@1x-desktop.jpg 1x, ./images/team-1@2x-desktop.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team-1@1x-tablet.jpg 1x, ./images/team-1@2x-tablet.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team-1@1x-mobile.jpg 1x, ./images/team-1@2x-mobile.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  class="team__img"
+                  src="./images/team-1@1x-mobile.jpg"
+                  alt="фото Игорь Демьяненко"
+                />
+              </picture>
+
               <div class="team__wrapper">
                 <h3 class="team__subtitle">Игорь Демьяненко</h3>
                 <p class="team__text">Product Designer</p>
@@ -314,12 +358,26 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                srcset="./images/team-2@2x.jpg 2x"
-                src="./images/team-2@1x.jpg"
-                alt="фото Ольга Репина"
-              />
+              <picture>
+                <source
+                  srcset="./images/team-2@1x-desktop.jpg 1x, ./images/team-2@2x-desktop.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team-2@1x-tablet.jpg 1x, ./images/team-2@2x-tablet.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team-2@1x-mobile.jpg 1x, ./images/team-2@2x-mobile.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team-2@1x-mobile.jpg"
+                  alt="фото Ольга Репина"
+                />
+              </picture>
+
               <div class="team__wrapper">
                 <h3 class="team__subtitle">Ольга Репина</h3>
                 <p class="team__text">Frontend Developer</p>
@@ -356,12 +414,26 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                srcset="./images/team-3@2x.jpg 2x"
-                src="./images/team-3@1x.jpg"
-                alt="фото Николай Тарасов"
-              />
+              <picture>
+                <source
+                  srcset="./images/team-3@1x-desktop.jpg 1x, ./images/team-3@2x-desktop.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team-3@1x-tablet.jpg 1x, ./images/team-3@2x-tablet.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team-3@1x-mobile.jpg 1x, ./images/team-3@2x-mobile.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team-3@1x-mobile.jpg"
+                  alt="фото Николай Тарасов"
+                />
+              </picture>
+
               <div class="team__wrapper">
                 <h3 class="team__subtitle">Николай Тарасов</h3>
                 <p class="team__text">Marketing</p>
@@ -398,12 +470,26 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                srcset="./images/team-4@2x.jpg 2x"
-                src="./images/team-4@1x.jpg"
-                alt="фото Михаил Ермаков"
-              />
+              <picture>
+                <source
+                  srcset="./images/team-4@1x-desktop.jpg 1x, ./images/team-4@2x-desktop.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team-4@1x-tablet.jpg 1x, ./images/team-4@2x-tablet.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team-4@1x-mobile.jpg 1x, ./images/team-4@2x-mobile.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team-4@1x-mobile.jpg"
+                  alt="фото Михаил Ермаков"
+                />
+              </picture>
+
               <div class="team__wrapper">
                 <h3 class="team__subtitle">Михаил Ермаков</h3>
                 <p class="team__text">UI Designer</p>

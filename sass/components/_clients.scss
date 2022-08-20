@@ -37,6 +37,10 @@
         height: 92px;
 
         transition: color var(--animation), border var(--animation);
+
+        @include mq(tabletOnly) {
+            width: 226px;
+        }
     }
 
     &__link:hover,

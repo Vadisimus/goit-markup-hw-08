@@ -3,11 +3,11 @@
     padding-bottom: 25px;
 
     border-bottom: 1px solid #ECECEC;
-    ;
 
     & .container {
             display: flex;
             align-items: center;
+            position: relative;
         }
     
     &__nav {
@@ -27,7 +27,7 @@
             text-decoration: none;
             color: rgba(0, 0, 0, 1);
 
-            @include mq(tablet) {
+            @include mq(desktop) {
                 font-size: 26px;
                 line-height: 1.19;
             }
@@ -36,14 +36,6 @@
     &__logo .header__span {
             color: var(--text-color-3);
         }
-
-    &__mobile-menu {
-        display: none;
-        
-        @include mq(mobileOnly) {
-            display: block;
-        }
-    }
     
     &__menu {
         display: none;
@@ -63,16 +55,7 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
-        margin-bottom: 302px;
-    }
-
-    &__mobile-contacts {
-        display: none;
-
-        @include mq(mobileOnly) {
-            display: block;
-            margin-bottom: 64px;
-        }
+        margin-bottom: auto;
     }
     
     &__contacts {
@@ -94,12 +77,14 @@
         @include mq(mobileOnly) {
             display: inline-flex;
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
             margin: 0;
-            padding: 0;
+            padding: 0 15px 0 0;
             border: none;
             background-color: transparent;
+            line-height: 0;
 
             fill: #000000;
 
@@ -112,14 +97,14 @@
         fill: #2196F3;
     }
 
-    
-        
-
-    
-    
+    &__btn--close {
+        top: -8px;
+        right: -40px;
+    }
 
     &__socials-list {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__socials-link {

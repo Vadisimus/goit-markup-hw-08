@@ -1,7 +1,13 @@
 .contacts {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 32px;
+    margin-bottom: 64px;
+
+    @include mq(tablet) {
+        gap: 10px;
+        margin-bottom: 0;
+    }
 
     @include mq(desktop) {
         flex-direction: row;
@@ -13,6 +19,7 @@
         display: none;
 
         @include mq(tablet) {
+            display: block;
             margin-right: 10px;
             fill: currentColor;
             width: 16px;
@@ -20,7 +27,6 @@
 
             transition: fill var(--animation);
         }
-        
     }
 
     &__icon-envelope:hover,
@@ -32,6 +38,7 @@
         display: none;
 
         @include mq(tablet) {
+            display: block;
             margin-right: 10px;
             fill: currentColor;
             width: 10px;
@@ -39,7 +46,6 @@
         
             transition: fill var(--animation);
         }
-        
     }
 
     &__icon-smartphone:hover,
@@ -61,16 +67,20 @@
         transition: color var(--animation);
 
         @include mq(tablet) {
-            font-size: 14px;
-            line-height: 1.14;
+            font-size: 12px;
+            line-height: 1.16;
         }
     }
 
    &__link--active {
     @include mq(mobileOnly) {
-        font-size: 34px;
+        
         line-height: 1.17;
         color: #2196F3;
+    }
+
+    @include mq(mobile) {
+        font-size: 34px;
     }
    }
 

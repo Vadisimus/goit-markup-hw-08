@@ -39,11 +39,6 @@
             letter-spacing: 0.06em;
             text-transform: uppercase;
             color: rgba(255, 255, 255, 1);
-
-            @include mq(tablet) {
-                font-size: 44px;
-                line-height: 1.36;
-            }
         
             @include mq(desktop) {
                 font-size: 44px;
@@ -52,9 +47,6 @@
         }
     
     &__btn {
-        @include mq(mobileOnly) {
-            display: none;
-        }
         display: inline-block;
         align-items: center;
         text-align: center;

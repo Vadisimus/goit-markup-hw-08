@@ -25,6 +25,7 @@
         color: var(--text-color-2);
 
         transition: color var(--animation);
+        
         @include mq(tablet) {
             padding-left: 0;
             padding-top: 32px;
@@ -39,9 +40,10 @@
         display: none;
         
         @include mq(tablet) {
+            display: block;
             position: absolute;
             left: 0;
-            bottom: -0.5px;
+            bottom: 0;
         
             content: '';
             width: 100%;

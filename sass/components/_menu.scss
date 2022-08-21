@@ -28,11 +28,16 @@
         
         @include mq(tablet) {
             padding-left: 0;
-            padding-top: 32px;
-            padding-bottom: 32px;
+            padding-top: 37px;
+            padding-bottom: 37px;
 
             font-size: 14px;
             line-height: 1.14;
+        }
+
+        @include mq(desktop) {
+            padding-top: 33px;
+            padding-bottom: 33px;
         }
     }
 

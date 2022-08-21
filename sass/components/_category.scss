@@ -9,7 +9,9 @@
     }
 
     &__link {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
         text-decoration: none;
         transition: box-shadow var(--animation);
     }
@@ -63,6 +65,17 @@
         padding: 20px 24px;
         border: 1px solid #EEEEEE;
         border-top: none;
+
+
+        flex-grow: 1;
+
+        @include mq(tablet) {
+            max-width: 354px;
+        }
+
+        @include mq(desktop) {
+            max-width: 370px;
+        }
     }
 
     &__title {
@@ -73,6 +86,7 @@
         line-height: 2;
         letter-spacing: 0.06em;
         color: var(--text-color-2);
+        overflow-wrap: break-word;
     }
 
     &__text {

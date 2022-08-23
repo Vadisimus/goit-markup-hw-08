@@ -19,10 +19,7 @@
     }
 
     &__label {
-        margin-top: 60px;
         margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
 
         font-weight: 700;
         font-size: 14px;
@@ -31,6 +28,10 @@
         text-transform: uppercase;
 
         color: #FFFFFF;
+
+        @include mq(desktop) {
+            margin-right: auto;
+        }
     }
 
     &__input {

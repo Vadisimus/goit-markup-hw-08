@@ -206,11 +206,13 @@ body {
 .header__socials-list {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 20px;
 }
 .header__socials-link {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
+  padding: 10px 0px;
   letter-spacing: 0.02em;
   color: #2196F3;
 }
@@ -644,6 +646,7 @@ body {
 .team__item {
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team__img {
   display: block;
@@ -877,13 +880,24 @@ body {
   color: #AFB1B8;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-  width: 170px;
-  height: 92px;
+  width: 130px;
+  height: auto;
   transition: color var(--animation), border var(--animation);
 }
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 480px) {
+  .clients__link {
+    width: 210px;
+    height: 92px;
+  }
+}
+@media screen and (min-width: 768px) {
   .clients__link {
     width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__link {
+    width: 170px;
   }
 }
 .clients__link:hover, .clients__link:focus {
@@ -913,9 +927,9 @@ body {
 @media screen and (min-width: 1200px) {
   .footer__container {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     align-items: baseline;
-    gap: 93px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -925,6 +939,7 @@ body {
     justify-content: center;
     align-items: baseline;
     gap: 165px;
+    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1001,6 +1016,11 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+@media screen and (max-width: 767.98px) {
+  .footer__social {
+    margin-bottom: 60px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__social {
     margin-left: auto;
@@ -1051,16 +1071,18 @@ body {
   align-items: center;
 }
 .subscribe__label {
-  margin-top: 60px;
   margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__label {
+    margin-right: auto;
+  }
 }
 .subscribe__input {
   padding: 15px 16px;
@@ -1140,12 +1162,22 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 450px;
   min-height: 609px;
   padding: 40px;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (max-width: 480px) {
+  .modal {
+    max-width: 450px;
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    min-width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {

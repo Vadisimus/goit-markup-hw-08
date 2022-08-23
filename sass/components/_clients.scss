@@ -22,6 +22,8 @@
         align-items: center;
         justify-content: center;
         gap: 30px;
+
+
     }
 
     &__link {
@@ -33,13 +35,22 @@
         border: 1px solid #AFB1B8;
         border-radius: 4px;
 
-        width: 170px;
-        height: 92px;
+        width: 130px;
+        height: auto;
 
         transition: color var(--animation), border var(--animation);
 
-        @include mq(tabletOnly) {
+        @include mq(mobile) {
+            width: 210px;
+            height: 92px;
+        }
+
+        @include mq(tablet) {
             width: 226px;
+        }
+
+        @include mq(desktop) {
+            width: 170px;
         }
     }
 

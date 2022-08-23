@@ -16,9 +16,9 @@
 
         @include mq(desktop) {
             display: flex;
+            justify-content: space-between;
             flex-direction: row;
             align-items: baseline;
-            gap: 93px;
         }
     }
 
@@ -29,6 +29,7 @@
             justify-content: center;
             align-items: baseline;
             gap: 165px;
+            margin-bottom: 60px;
         }
 
             @include mq(desktop) {
@@ -121,6 +122,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include mq(mobileOnly) {
+            margin-bottom: 60px;
+        }
 
         @include mq(desktop) {
             margin-left: auto;

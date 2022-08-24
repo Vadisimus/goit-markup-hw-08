@@ -12,6 +12,10 @@
     visibility: visible;
     opacity: 1;
     transition: opacity var(--animation);
+
+    @include mq(tablet) {
+        display: none;
+    }
 }
 
 .backdrop-mobile.is-hidden {

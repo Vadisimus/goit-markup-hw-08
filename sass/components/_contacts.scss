@@ -70,6 +70,11 @@
             font-size: 12px;
             line-height: 1.16;
         }
+
+        @include mq(desktop) {
+            font-size: 14px;
+            line-height: 1.14;
+        }
     }
 
    &__link--active {

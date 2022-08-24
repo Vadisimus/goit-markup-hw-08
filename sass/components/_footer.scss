@@ -23,6 +23,10 @@
     }
 
     &__tablet-view {
+        @include mq(mobileOnly) {
+            margin-bottom: 60px;
+        }
+
         @include mq(tablet) {
             display: flex;
             align-items: center;
@@ -38,6 +42,7 @@
             justify-content: center;
             align-items: baseline;
             gap: 70px;
+            margin-bottom: 0;
         }
     }
 
@@ -123,9 +128,7 @@
         flex-direction: column;
         justify-content: center;
 
-        @include mq(mobileOnly) {
-            margin-bottom: 60px;
-        }
+
 
         @include mq(desktop) {
             margin-left: auto;
